@@ -4,7 +4,7 @@ import AuthPage from "./components/auth/Login&reg";
 
 import LandingPage from "./Pages/Landing_page";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./context/authcontext";
+import { AuthProvider } from "./context/AuthContext";
 import FullDashboard from "./Pages/FullDashboard";
 import { ThemeProvider } from "@/components/theme-provider";
 import {
