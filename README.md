@@ -19,8 +19,8 @@ Ensure you have the following installed:
 ### Steps to Set Up the Project
 1. **Clone the Repository**
    ```sh
-   git clone https://github.com/your-username/vaed-assignment-frontend.git
-   cd vaed-assignment-frontend
+   git clone https://github.com/priyanshuKumar56/Student_productive_Hub
+   cd Student_productive_Hub
    ```
 
 2. **Install Dependencies**
