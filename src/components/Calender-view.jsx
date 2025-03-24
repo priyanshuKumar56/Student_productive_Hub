@@ -1425,7 +1425,7 @@ const CalendarView = memo(function CalendarView() {
 
       {/* Event Dialog */}
       <Dialog open={showEventDialog} onOpenChange={setShowEventDialog}>
-        <DialogContent className="sm:max-w-[500px]">
+        <DialogContent className="sm:max-w-[500px] h-screen overflow-y-auto">
           <DialogHeader>
             <DialogTitle>{isEditMode ? "Edit Event" : "Add Event"}</DialogTitle>
           </DialogHeader>
