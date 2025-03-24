@@ -1268,17 +1268,7 @@ const CalendarView = memo(function CalendarView() {
               onChange={(e) => handleSearch(e.target.value)}
             />
           </div>
-          <Tabs
-            value={view}
-            onValueChange={(value) => dispatch(setView(value))}
-          >
-            <TabsList>
-              <TabsTrigger value="month">Month</TabsTrigger>
-              <TabsTrigger value="week">Week</TabsTrigger>
-              <TabsTrigger value="day">Day</TabsTrigger>
-              <TabsTrigger value="agenda">Agenda</TabsTrigger>
-            </TabsList>
-          </Tabs>
+
           <Button onClick={() => handleAddEvent()}>
             <Plus className="h-4 w-4 mr-2" />
             Add Event
@@ -1360,25 +1350,35 @@ const CalendarView = memo(function CalendarView() {
 
         {/* Main calendar view */}
         <Card className={`${showSidebar ? "md:col-span-3" : "md:col-span-4"}`}>
-          <CardContent className="p-6">
-            <TabsContent value="month" className="mt-0">
-              {renderMonthView()}
-            </TabsContent>
+          <Tabs
+            value={view}
+            onValueChange={(value) => dispatch(setView(value))}
+          >
+            <TabsList>
+              <TabsTrigger value="month">Month</TabsTrigger>
+              <TabsTrigger value="week">Week</TabsTrigger>
+              <TabsTrigger value="day">Day</TabsTrigger>
+              <TabsTrigger value="agenda">Agenda</TabsTrigger>
+            </TabsList>
+            <CardContent className="p-6">
+              <TabsContent value="month" className="mt-0">
+                {renderMonthView()}
+              </TabsContent>
 
-            <TabsContent value="week" className="mt-0">
-              {renderWeekView()}
-            </TabsContent>
+              <TabsContent value="week" className="mt-0">
+                {renderWeekView()}
+              </TabsContent>
 
-            <TabsContent value="day" className="mt-0">
-              {renderDayView()}
-            </TabsContent>
+              <TabsContent value="day" className="mt-0">
+                {renderDayView()}
+              </TabsContent>
 
-            <TabsContent value="agenda" className="mt-0">
-              {renderAgendaView()}
-            </TabsContent>
-          </CardContent>
+              <TabsContent value="agenda" className="mt-0">
+                {renderAgendaView()}
+              </TabsContent>
+            </CardContent>
+          </Tabs>
         </Card>
-
         {selectedDate && selectedDateEvents.length > 0 && view !== "agenda" && (
           <Card
             className={`${
