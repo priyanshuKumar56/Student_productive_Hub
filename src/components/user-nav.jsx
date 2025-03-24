@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useAuth } from "@/context/authcontext";
+import { useAuth } from "@/context/AuthContext";
 
 export function UserNav() {
   const { user, logout } = useAuth();
