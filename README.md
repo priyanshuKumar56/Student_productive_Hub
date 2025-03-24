@@ -89,8 +89,8 @@ For Netlify:
 ---
 
 ## Contributors
-- **Your Name** – *Frontend Engineer Intern*
-- **Team Members (if applicable)**
+- **Your Name** – *Priyanshu kumar*
+
 
 ---
 
